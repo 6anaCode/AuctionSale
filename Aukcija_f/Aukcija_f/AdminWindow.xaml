@@ -1,0 +1,39 @@
+﻿<Window x:Class="Aukcija_f.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aukcija_f"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="450" Width="800" Background="AliceBlue">
+    <Grid>
+       
+
+
+        <Button x:Name="resetUI" Content="Reset UI"  Click="Reset_Click" Margin="250,369,436,24"/>
+        <Button x:Name="add" Content="Add" Click="Add_Click" Margin="450,210,249,183"/>
+        <Button x:Name="delete" Content="Delete" Click="Delete_Click" Margin="71,369,603,24"/>
+
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Height="36" Margin="50,44,455,0">
+                <Label Content="ID" Width="31"/>
+                <Label Content="Title" Width="39"/>
+                <Label Content="Default Price"/>
+                <Label Content="Last Price"/>
+                <Label Content="Last Bidder"/>
+
+            </StackPanel>
+            <ListBox x:Name="listBox" SelectionChanged="listBox_SelectionChanged" Margin="50,0,455,153" Height="265" />
+        </StackPanel>
+        <TextBox x:Name="title" Text="Insert Title" HorizontalAlignment="Left" Margin="425,101,0,288"  Background="White" Width="137" BorderBrush="White"/>
+        <TextBox x:Name="price" Text="Insert Price" HorizontalAlignment="Left" Margin="425,152,0,238"  Background="white" Width="137" BorderBrush="White"/>
+        <TextBox x:Name="id"  HorizontalAlignment="Left" Margin="425,55,0,340" IsReadOnly="True" Visibility="Hidden" Background="White" Width="137" BorderBrush="White"/>
+        <Button x:Name="back" Content="Back" Margin="637,62,28,324" Click="Back_Click"/>
+        <Label x:Name="labelTimer" Content="" FontSize="30" Background="White" Margin="655,308,47,32">
+          
+        </Label>
+
+        <Label x:Name="message" Content="" Foreground="Red" Margin="439,278,205,24"></Label>
+
+    </Grid>
+</Window>

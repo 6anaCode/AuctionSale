@@ -1,0 +1,36 @@
+﻿<Window x:Class="Aukcija_f.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aukcija_f"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="450" Width="800" Background="AliceBlue">
+    <Grid>
+
+
+        <TextBox x:Name="bid" Background="White" IsReadOnly="True" Visibility="Hidden" Margin="597,148,10,240"/>
+        <Button x:Name="buttonBid" Content="Bid" Click="Bid_Click" IsEnabled="False" Margin="629,216,32,166"/>
+        <Label x:Name="labelTimer" Content="" FontSize="30" Background="White" Height="79" Width="90" Margin="388,58,314,282"/>
+        
+        
+        <TextBox x:Name="id" Text="id" Background="White" Visibility="Hidden" Margin="347,180,314,219"/>
+        <Button x:Name="back" Content="Back" Margin="629,39,45,345" Click="Back_Click">
+
+        </Button>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Height="36" Margin="50,44,455,0">
+                <Label Content="ID" Width="31"/>
+                <Label Content="Title" Width="39"/>
+                <Label Content="Default Price"/>
+                <Label Content="Last Price"/>
+                <Label Content="Last Bidder"/>
+
+            </StackPanel>
+            <ListBox x:Name="listBox" SelectionChanged="listBox_SelectionChanged" Margin="50,0,455,153" Height="265" />
+        </StackPanel>
+
+        <Label x:Name="message" Content="" Foreground="Red"  Margin="545,305,85,22"></Label>
+        <Label x:Name="bidmessage" Content="Bid successful!" FontSize="20" Visibility="Hidden" Foreground="Red"  Margin="629,148,10,219"></Label>
+    </Grid>
+</Window>
