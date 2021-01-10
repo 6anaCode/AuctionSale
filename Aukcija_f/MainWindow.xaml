@@ -1,0 +1,44 @@
+﻿<Window x:Class="Aukcija_f.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aukcija_f"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="AliceBlue">
+    <Grid>
+
+        <StackPanel Margin="504,67,128,157" Orientation="Vertical">
+            <Label Content="Login" HorizontalAlignment="Center" Background="AliceBlue"  Margin="46,0,43,0"/>
+            <Label Content="User Name" />
+
+            <TextBox x:Name="UserName" Text=""  />
+            <Label Content="Password"/>
+            <PasswordBox x:Name="UserPass"/>
+            <Label Content="  "></Label>
+            <Button x:Name="Login" Content="Login"  Click="Login_Click"/>
+        </StackPanel>
+
+
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Height="36" Margin="50,44,455,0">
+                <Label Content="ID" Width="31"/>
+                <Label Content="Title" Width="39"/>
+                <Label Content="Default Price"/>
+                <Label Content="Last Price"/>
+                <Label Content="Last Bidder"/>
+
+            </StackPanel>
+            <ListBox x:Name="listBox" Margin="50,0,455,153" Height="265" />
+        </StackPanel>
+
+
+        <Label x:Name="labelTimer" Content="" FontSize="30" Background="White" Height="79" Width="90" Margin="368,98,334,242"/>
+
+
+        <Label x:Name="message" Content="" Foreground="Red" Margin="485,284,128,33"></Label>
+
+    </Grid>
+
+
+</Window>
